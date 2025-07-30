@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать статью</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <input id="url_title" name="url_title" type="text" value="<%= article.url_title %>">
+        <input id="title" name="title" type="text" value="<%= article.title %>">
+        <textarea id="text" name="text"><%= article.revisions[article.revisions.length - 1].content %></textarea>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

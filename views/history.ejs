@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список статей на вики</title>
+</head>
+<body>
+    <h1>Список статей на вики</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Контент</th>
+                <th>IP-адрес</th>
+            </tr>
+            <tr></tr>
+        </thead>
+        <tbody>
+        <% article.revisions.forEach(revision => { %>
+            <tr>
+                <td><%= revision.content %></td>
+                <td><%= revision.author_ip %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
